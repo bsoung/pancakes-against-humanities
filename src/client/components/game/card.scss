@@ -1,0 +1,194 @@
+@import "../../variables";
+
+.c-card {
+	@include user-select-none;
+
+	cursor: default;
+	display: inline-block;
+	position: relative;
+
+	&.black {
+		bottom: 5px;
+		width: ($width-card + 30px);
+	}
+
+	&.black .inner {
+		background: #000;
+		background-image: url("../../../../public/pancake-syrup.png");
+		background-size: cover;
+		background-position: center;
+		color: #fff;
+		height: ($height-card + 70px);
+		padding-top: 82px;
+		text-align: center;
+		text-shadow: 0.5px 0 0 black, -0.5px 0 0 black, 0 0.5px 0 black, 0 -0.5px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	}
+
+	&.white .inner {
+		background: #fff;
+		background-image: url("../../../../public/pancakes.png");
+		background-size: cover;
+		color:#fff;
+		text-shadow: 0.5px 0 0 black, -0.5px 0 0 black, 0 0.5px 0 black, 0 -0.5px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+	}
+
+	.inner {
+		padding: 10px;
+		padding-top: 32px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
+		transition: box-shadow 250ms linear;
+		text-align: center;
+	}
+
+	&.front {
+		font-size: 15px;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+
+		.set {
+			position: absolute;
+			bottom: 5px;
+			left: 10px;
+			font-size: 9px;
+		}
+
+		.white-count {
+			position: absolute;
+			right: 10px;
+			bottom: 5px;
+			font-size: 12px;
+
+			> span {
+				font-weight: bold;
+			}
+		}
+	}
+
+	&.back {
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	&.is-selectable {
+		.inner {
+			box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+			cursor: pointer;
+
+			&:active {
+				padding: 8px;
+				border: 2px solid $color-primary;
+
+				.set {
+					left: 8px;
+					bottom: 3px;
+				}
+			}
+		}
+	}
+
+	&.style-small {
+		width: ($width-card * $card-scale-factor);
+		height: ($height-card * $card-scale-factor);
+
+		.inner {
+			transform: scale(1);
+			transform-origin: center;
+			transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+
+		&.can-zoom:hover {
+			overflow: visible;
+			z-index: 200;
+
+			.inner {
+				transform: scale(1 / $card-scale-factor);
+				z-index: 200;
+				box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+			}
+		}
+	}
+}
+
+.floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 5px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 5px);}
+    to {-moz-transform: translate(0, -0px);}
+}
+
+[id="0"] {
+	-webkit-animation-delay: .2s;
+	animation-delay: .2s;
+}
+
+[id="1"] {
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s;
+}
+
+[id="2"] {
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+}
+
+[id="3"] {
+	-webkit-animation-delay: 8s;
+	animation-delay: .8s;
+}
+
+[id="4"] {
+	-webkit-animation-delay: 1.0s;
+	animation-delay: 1.0s;
+}
+
+[id="9"] {
+	-webkit-animation-delay: 2.0s;
+	animation-delay: 2.0s;
+}
+
+[id="8"] {
+	-webkit-animation-delay: 1.8s;
+	animation-delay: 1.8s;
+}
+
+[id="7"] {
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
+}
+
+[id="6"] {
+	-webkit-animation-delay: 1.4s;
+	animation-delay: 1.4s;
+}
+
+[id="5"] {
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}

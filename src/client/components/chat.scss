@@ -1,0 +1,79 @@
+@import "../variables";
+$author-width: 100px;
+
+.c-chat {
+	@include section;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex: none;
+	width: 25%;
+	right: 0;
+	top: 0;
+	position: fixed;
+	height: 100vh;
+
+	&:after {
+		background: darken($color-background, 5%);
+		width: 140px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		content: " ";
+		z-index: 0;
+		border-right: 1px solid darken($color-background, 10%);
+	}
+
+	> .messages {
+		@include unlistify;
+		flex-grow: 1;
+		z-index: 100;
+		overflow-y: scroll;
+		bottom: 0;
+		margin-bottom: 30px;
+	    	position: absolute;
+	   	padding-left: 6px;
+
+		> li {
+			padding: 3px 0;
+			display: flex;
+
+			.author {
+				font-weight: bold;
+				padding-left: 10px;
+				word-wrap: break-word;
+				padding-right: 5px;
+				box-sizing: border-box;
+				align-self: center;
+				text-overflow: ellipsis;
+				width: 75px;
+				margin-right: auto;
+			}
+
+			.message {
+				margin-top: 18px;
+				padding-left: 20px;
+				width: 175px;
+    				word-wrap: break-word
+			}
+		}
+	}
+
+	> form {
+		z-index: 100;
+		bottom: 0;
+	    position: fixed;
+	    width: 25%;
+
+		.m-textbox {
+			background: $color-background;
+
+			input {
+				padding: 5px;
+				padding-top: 7px;
+			}
+		}
+	}
+}
+

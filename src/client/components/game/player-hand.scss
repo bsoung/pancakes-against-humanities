@@ -1,0 +1,52 @@
+@import "../../variables";
+
+.c-player-hand {
+	position: absolute;
+	width: 100%;
+	bottom: 60px;
+	z-index: 100;
+	// border-bottom: 2px solid $color-section-border;
+	background: black;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin-bottom: 10px;
+
+	.title {
+		@include divider;
+		cursor: pointer;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border: 1px solid #2196F3;
+		&:hover {
+			background: lighten($color-primary, 5%);
+		}
+	}
+
+	&.is-closed {
+		border-radius: 20px;
+		position: fixed;
+		width: 10%;
+		bottom: 3px;
+		margin-left: 10px;
+		.cards {
+			display: none;
+		}
+	}
+
+	.cards {
+		box-sizing: border-box;
+		margin-bottom: 40px;
+		border-top: none;
+		flex-grow: 1;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 5px;
+		max-height: 630px;
+		justify-content: space-between;
+		overflow-y: auto;
+
+		> .c-card {
+			margin: 5px;
+		}
+	}
+}

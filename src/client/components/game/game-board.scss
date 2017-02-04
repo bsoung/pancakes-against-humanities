@@ -1,0 +1,30 @@
+@import "../../variables";
+
+.c-game-board {
+	flex-grow: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 700px;
+
+	> .black-card {
+		display: flex;
+		flex-direction: column;
+		flex: none;
+		margin: 10px auto;
+
+
+
+		.c-card {
+			margin-bottom: 10px;
+		}
+
+
+	}
+}
+
+.game-status {
+	@include divider;
+}

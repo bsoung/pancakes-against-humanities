@@ -1,0 +1,115 @@
+@import "../variables";
+
+.c-game-list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-shrink: 0;
+	padding: 10px;
+	text-align: center;
+
+	.no-games {
+		padding: 10px;
+		margin-bottom: 10px;
+		background: $color-section-border;
+		width: 100%;
+		border-radius: 20px;
+		border: 1px solid #2196F3;
+	}
+
+	> .game {
+		@include raised;
+		border-radius: 90px;
+		// background: tan;
+		background-image: url("../../../public/pancake-syrup.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		width: 170px;
+		min-height: 140px;
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		justify-content: space-between;
+		align-items: center;
+		transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		.title {
+			border-radius: 90px;
+			background: #EFBD1B;
+			font-weight: bold;
+			margin-top: -1px;
+			margin-bottom: 5px;
+			font-size: $header-font-size;
+			padding: 3px;
+		}
+
+		.players {
+			flex-grow: 1;
+			overflow: hidden;
+			padding: 0 10px;
+			text-align: left;
+			list-style: none;
+			text-shadow: 1px 1px 2px #EFBD1B, 0 0 1em #EFBD1B, 0 0 0.2em #EFBD1B;
+
+		}
+
+		.join-game {
+			text-align: center;
+			padding: 5px;
+			font-weight: bold;
+			color: $color-primary;
+		}
+
+		&:hover {
+			box-shadow: 2px 2px 4px black;
+		}
+	}
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.loginButton {
+	background: linear-gradient(to bottom, #728CC5, #4764A7);
+	height: 40px;
+	width: 110px;
+	border: none;
+	color: #FFFFFF;
+	border-radius: 20px;
+	margin: 3px;
+	margin-right: 0;
+	padding: 0;
+	font-size: 13px;
+	border-bottom: solid 0.5px #2F467C;
+	border-right: solid 0.5px #31467C;
+
+}
+
+.fbLoginButton {
+	background-image: url("../../../public/fbLogin.png");
+	background-size: cover;
+	background-position: center;
+	height: 40px;
+	width: 200px;
+	margin: 3px;
+	border: none;
+	background-color: darkgray;
+	border-radius: 20px;
+}
+
+.identity {
+	margin: 10px;
+	width: 60px;
+	overflow: visible;
+	text-align: center;
+}
+
+.identity > img {
+	border: 1px solid lightgray;
+	border-radius: 15px;
+}
