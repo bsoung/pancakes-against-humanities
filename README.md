@@ -1,4 +1,5 @@
 # Pancakes Against Humanity
+By bsoung, phc5, jpke
 
 ## Motivation
 A pancake twist of [Cards Against Humanity](https://www.cardsagainsthumanity.com/) where users can play one another remotely using pancake themed cards while interacting over live chat.
