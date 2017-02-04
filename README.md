@@ -4,7 +4,7 @@
 A pancake twist of [Cards Against Humanity](https://www.cardsagainsthumanity.com/) where users can play one another remotely using pancake themed cards while interacting over live chat.
 
 ## How to play
-Navigate to (deploy link here) to play now
+Navigate to [here](http://pah-cah.herokuapp.com) to play now
 
 Login through Facebook OAuth
 
